@@ -18,3 +18,10 @@ body,
 .signature-alex {
   font-family: 'Alex Brush', cursive;
 }
+
+.ftx-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px #a855f7;
+  text-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
+  font-weight: 900;
+}

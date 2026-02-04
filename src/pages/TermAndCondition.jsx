@@ -58,7 +58,7 @@ const TermsAndConditions = () => {
               THE <span className="text-purple-600">RULES.</span>
             </h1>
             <p className="text-gray-500 uppercase tracking-[0.5em] text-[10px] font-black mb-12">
-              AmanFTX Agency / Legal Guidelines
+              FTX Media Agency / Legal Guidelines
             </p>
 
             {/* Quick Link Navigation */}
@@ -126,7 +126,7 @@ const TermsAndConditions = () => {
 
           <footer className="mt-12 text-center">
             <p className="text-[9px] text-gray-700 uppercase tracking-[0.4em] font-black italic">
-              © {new Date().getFullYear()} AmanFTX. All Rights Reserved. Designed by Sumit Soni.
+              © {new Date().getFullYear()} FTX Media. All Rights Reserved. Designed by Sumit Soni.
             </p>
           </footer>
         </div>

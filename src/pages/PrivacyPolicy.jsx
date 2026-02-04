@@ -75,7 +75,7 @@ const PrivacyPolicy = () => {
             </h1>
             
             <p className="text-gray-500 uppercase tracking-[0.5em] text-[10px] font-black mb-12">
-              AmanFTX / Secure Data Protocol
+              FTX Media / Secure Data Protocol
             </p>
 
             {/* Quick Link Navigation */}
@@ -143,7 +143,7 @@ const PrivacyPolicy = () => {
 
           <footer className="mt-12 text-center">
             <p className="text-[9px] text-gray-700 uppercase tracking-[0.4em] font-black italic">
-              © {new Date().getFullYear()} AmanFTX. Stay Secure. Stay Creative.
+              © {new Date().getFullYear()} FTX Media. Stay Secure. Stay Creative.
             </p>
           </footer>
         </div>

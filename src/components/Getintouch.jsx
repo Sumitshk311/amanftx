@@ -122,7 +122,7 @@ const ContactFooter = () => {
         {/* Copyright Section */}
         <div className="pb-10">
           <p className="text-white/50 text-[9px] uppercase tracking-[0.4em] font-medium">
-            © 2026 AmanFtx. All Rights Reserved.
+            © 2026 Ftx Media. All Rights Reserved.
           </p>
         </div>
       </div>

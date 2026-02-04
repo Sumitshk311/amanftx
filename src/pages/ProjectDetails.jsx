@@ -142,7 +142,7 @@ const ProjectDetails = () => {
               <div className="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black via-transparent to-transparent flex justify-between items-end">
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-purple-500 font-black">
-                    AMAN FTX
+                    FTX Media
                   </p>
                   <p className="text-xs uppercase">{isPlaying ? "Playing" : "Paused"}</p>
                 </div>
@@ -214,7 +214,7 @@ const ProjectDetails = () => {
             </div>
 
             <p className="text-gray-700 text-[9px] uppercase tracking-[0.5em] font-bold">
-              © AMAN FTX 
+              © FTX Media 2026. All Rights Reserved. 
             </p>
 
           </div>

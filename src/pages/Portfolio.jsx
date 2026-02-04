@@ -51,7 +51,7 @@ const Portfolio = () => {
         className="w-16 h-16 border-t-4 border-b-4 border-purple-600 rounded-full shadow-[0_0_20px_rgba(147,51,234,0.3)]"
       />
       <div className="text-center">
-        <p className="text-white font-black uppercase tracking-[0.8em] text-[10px] animate-pulse">Aman FTX</p>
+        <p className="text-white font-black uppercase tracking-[0.8em] text-[10px] animate-pulse">FTX Media</p>
         <p className="text-gray-600 text-[8px] uppercase tracking-widest mt-2 font-bold italic">Loading Archives...</p>
       </div>
     </div>

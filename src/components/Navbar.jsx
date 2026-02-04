@@ -26,13 +26,12 @@ const Navbar = () => {
           {/* LOGO */}
           <div
             onClick={() => navigate("/")}
-            className="cursor-pointer text-white text-2xl font-black italic tracking-tighter"
+            className="cursor-pointer text-3xl font-black italic tracking-wider flex gap-2"
           >
-            Aman
-            <span className="text-purple-500 drop-shadow-[0_0_10px_rgba(168,85,247,0.6)]">
-              FTX
-            </span>{" "}
-            Edits
+            <span className="ftx-outline">FTX</span>
+            <span className="text-white drop-shadow-[0_0_10px_rgba(168,85,247,0.6)]">
+              Media
+            </span>
           </div>
 
           {/* DESKTOP NAV */}
