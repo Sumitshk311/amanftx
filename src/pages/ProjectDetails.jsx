@@ -166,7 +166,7 @@ const ProjectDetails = () => {
 
             {/* ✅ DESCRIPTION FIX */}
             <p className="text-gray-400 text-lg md:text-xl italic leading-relaxed border-l-2 border-purple-500/30 pl-6">
-              {project.description || "No description added by admin."}
+              {project.description || "No description."}
             </p>
 
             {/* 🛠 TOOLS SECTION */}

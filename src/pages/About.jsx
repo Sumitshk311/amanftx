@@ -1,145 +1,96 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Instagram, Mail, MessageCircle, ArrowUpRight, Zap, Target } from "lucide-react";
+import { Mail, Instagram, ArrowUpRight, Sparkles } from "lucide-react";
 import logo from "../assets/logo.png";
 
 const AboutMe = () => {
   const skills = [
-    { name: "Premiere Pro", short: "Pr", color: "text-blue-500", glow: "shadow-blue-500/20" },
-    { name: "After Effects", short: "Ae", color: "text-purple-500", glow: "shadow-purple-500/20" },
-    { name: "CapCut Pro", short: "Cc", color: "text-white", glow: "shadow-white/10" },
+    { name: "Pr", color: "text-blue-500", fullName: "Premiere Pro" },
+    { name: "Ae", color: "text-purple-500", fullName: "After Effects" },
+    { name: "Cc", color: "text-white", fullName: "CapCut Pro" },
   ];
 
   return (
-    <section className="relative min-h-screen bg-[#020205] pt-[8rem] pb-24 overflow-hidden selection:bg-purple-500/30">
+    <section className="relative min-h-screen bg-[#020205] flex items-center pt-20 pb-20 overflow-hidden font-sans">
       
-      {/* Ambient Background Glows */}
-      <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-600/10 blur-[150px] rounded-full" />
-      <div className="absolute bottom-[0%] right-[-5%] w-[500px] h-[500px] bg-blue-600/10 blur-[150px] rounded-full" />
+      {/* Background Glows (Minimal) */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
-        {/* HERO SECTION */}
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 mb-32">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
           
-          {/* LEFT: IMAGE & FLOATING BADGE */}
+          {/* LEFT: Image Section */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="relative group"
+            transition={{ duration: 0.8 }}
+            className="relative flex-shrink-0"
           >
-            {/* Outer Glow */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-600 to-blue-500 blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700" />
-
-            {/* Profile Image Container */}
-            <div className="relative w-72 h-72 md:w-[450px] md:h-[450px] rounded-[4rem] p-[2px] bg-gradient-to-br from-purple-500/50 via-transparent to-blue-500/50">
-              <div className="w-full h-full rounded-[4rem] overflow-hidden border-[6px] border-[#020205]">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-white/10 p-2 bg-gradient-to-b from-white/10 to-transparent">
                 <img
                   src={logo}
-                  alt="AmanFTX Profile"
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  alt="Aman"
+                  className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
                 />
-              </div>
             </div>
-
-            {/* EXP BADGE (Wapis Pehle Jaisa) */}
-            <motion.div
-              animate={{ y: [0, -12, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -bottom-6 -right-6 bg-black/80 backdrop-blur-xl text-white px-8 py-4 rounded-[2rem] font-black italic border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center gap-3 uppercase text-xs tracking-widest"
-            >
-              <div className="w-2 h-2 bg-purple-500 rounded-full animate-ping" />
-              4+ Years Experience
-            </motion.div>
+            
+            {/* Minimal Badge */}
+            <div className="absolute -bottom-2 -right-2 bg-white text-black px-4 py-2 rounded-full font-bold text-[10px] uppercase tracking-tighter shadow-xl">
+              07 Years Exp.
+            </div>
           </motion.div>
 
-          {/* RIGHT: TEXT CONTENT */}
-          <div className="flex-1">
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="space-y-8"
-            >
-              <div>
-                <h2 className="text-purple-500 font-black uppercase tracking-[0.5em] text-[10px] mb-4">
-                  The Creative Mind
-                </h2>
-                <h1 className="text-6xl md:text-8xl font-black italic text-white leading-[0.85] tracking-tighter uppercase">
-                  About <br />
-                  <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                    Me
+          {/* RIGHT: Content Section */}
+          <div className="flex-1 space-y-6 text-center md:text-left">
+            <div className="space-y-2">
+              <span className="flex items-center justify-center md:justify-start gap-2 text-purple-500 text-[10px] font-black uppercase tracking-[0.4em]">
+                <Sparkles size={12} /> Founder of FTX MEDIA
+              </span>
+              <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter uppercase leading-none">
+                Scaling <br />
+                <span className="text-purple-600">7-Figure Brands.</span>
+              </h2>
+            </div>
+
+            <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
+              I’m <span className="text-white">Aman</span>, a veteran editor with <span className="text-white">7 years of experience</span> helping brands dominate through high-engagement edits. 
+              Currently running <span className="text-purple-500 font-bold italic">FTX MEDIA</span> to scale new brands like yours.
+            </p>
+
+            <p className="text-gray-500 text-sm italic max-w-md mx-auto md:mx-0">
+              "I only partner with those who value creativity and premium quality over cost. If you're looking for a masterpiece vibe, let's create something awesome."
+            </p>
+
+            {/* Simple Skills Row */}
+            <div className="flex flex-wrap justify-center md:justify-start gap-6 py-2">
+              {skills.map((skill, idx) => (
+                <div key={idx} className="flex flex-col items-center md:items-start group">
+                  <span className={`text-xl font-black ${skill.color}`}>{skill.name}</span>
+                  <span className="text-[8px] uppercase tracking-widest text-gray-600 group-hover:text-gray-400 transition-colors">
+                    {skill.fullName}
                   </span>
-                </h1>
-              </div>
+                </div>
+              ))}
+            </div>
 
-              <p className="text-gray-400 text-lg md:text-xl leading-relaxed font-medium max-w-2xl">
-                I’m a <span className="text-white">Creative Video Editor</span> who 
-                doesn't just cut clips—I build worlds. From high-octane 
-                <span className="text-purple-400 font-bold"> Anime Edits</span> to 
-                engaging <span className="text-blue-400 font-bold">Short-form Content</span>, 
-                I focus on storytelling that stops the scroll.
-              </p>
+            {/* Simple Actions */}
+            <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
+              <button 
+                onClick={() => window.location.href = '/hire-me'}
+                className="group flex items-center gap-2 px-8 py-3 bg-white text-black rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-purple-600 hover:text-white transition-all"
+              >
+                Let's Collab <ArrowUpRight size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              </button>
 
-              {/* SKILLS CAPSULES */}
-              <div className="flex flex-wrap gap-4">
-                {skills.map((skill, i) => (
-                  <motion.div
-                    key={i}
-                    whileHover={{ scale: 1.05, y: -5 }}
-                    className={`flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/[0.03] border border-white/10 shadow-xl transition-all`}
-                  >
-                    <span className={`${skill.color} font-black text-xl italic`}>{skill.short}</span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">{skill.name}</span>
-                  </motion.div>
-                ))}
+              <div className="flex gap-4">
+                <a href="https://instagram.com/sumitsonishk311" className="text-gray-500 hover:text-white transition-colors"><Instagram size={20} /></a>
+                <a href="mailto:your@email.com" className="text-gray-500 hover:text-white transition-colors"><Mail size={20} /></a>
               </div>
-
-              {/* SOCIALS */}
-              <div className="flex items-center gap-6 pt-4">
-                {[
-                  { icon: <Instagram />, href: "https://instagram.com/sumitsonishk311", color: "hover:text-pink-500" },
-                  { icon: <Mail />, href: "mailto:your@email.com", color: "hover:text-blue-500" },
-                  { icon: <MessageCircle />, href: "/hire-me", color: "hover:text-green-500" },
-                ].map((social, i) => (
-                  <a
-                    key={i}
-                    href={social.href}
-                    target="_blank"
-                    className={`w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40 ${social.color} transition-all duration-300 hover:bg-white/10 hover:border-white/20`}
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-
-        {/* BOTTOM CTA: "The Mission" */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="relative rounded-[4rem] bg-gradient-to-br from-purple-600/10 to-blue-600/10 border border-white/5 p-12 md:p-20 text-center overflow-hidden group"
-        >
-          <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:30px_30px]" />
-          
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-black italic text-white uppercase mb-8 tracking-tighter">
-              Ready to create <br /> a <span className="text-purple-600">Masterpiece?</span>
-            </h2>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="/hire-me"
-              className="inline-flex items-center gap-4 px-14 py-5 rounded-full bg-white text-black font-black uppercase tracking-[0.2em] text-xs transition-all shadow-2xl hover:bg-purple-500 hover:text-white"
-            >
-              Hire Me <ArrowUpRight size={20} />
-            </motion.a>
-          </div>
-        </motion.div>
-
       </div>
     </section>
   );

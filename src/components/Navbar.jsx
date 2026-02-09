@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-[200]">
       {/* NAVBAR BAR */}
-      <div className="bg-black/50 backdrop-blur-xl border-b border-white/5">
+      <div className="bg-black/50 backdrop-blur-xl border-b border-white/5 relative z-[210]">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* LOGO */}
           <div
@@ -58,9 +58,9 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* MOBILE MENU BUTTON (FIXED VISIBILITY) */}
+          {/* MOBILE MENU BUTTON */}
           <button
-            className="md:hidden text-white z-[210] mix-blend-difference"
+            className="md:hidden text-white outline-none"
             onClick={() => setOpen(!open)}
           >
             {open ? <X size={30} /> : <Menu size={30} />}
@@ -68,14 +68,16 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* MOBILE FULLSCREEN MENU */}
+      {/* MOBILE FULLSCREEN MENU & OVERLAY */}
       <div
-        className={`fixed inset-0 bg-black/90 backdrop-blur-2xl transition-all duration-500 md:hidden z-[190]
+        className={`fixed inset-0 bg-black/80 backdrop-blur-2xl transition-all duration-500 md:hidden z-[190]
         ${open ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
+        // ✅ Yeh line background click par menu band karegi
         onClick={() => setOpen(false)}
       >
         <nav
-          className="flex flex-col p-8 pt-32 gap-8 h-full"
+          className="flex flex-col p-8 pt-32 gap-8 w-[80%] h-full bg-black/40 border-r border-white/5"
+          // ✅ Yeh line menu ke andar click karne par band hone se rokegi (important)
           onClick={(e) => e.stopPropagation()}
         >
           {navLinks.map((link, index) => (
@@ -97,7 +99,7 @@ const Navbar = () => {
           <button
             onClick={() => handleNavigation("/hire-me")}
             className="mt-10 w-full bg-gradient-to-r from-purple-600 to-indigo-600
-            py-5 rounded-2xl text-white font-black uppercase tracking-widest"
+            py-5 rounded-2xl text-white font-black uppercase tracking-widest active:scale-[0.98] transition-all"
           >
             Hire Me Now
           </button>
