@@ -17,7 +17,7 @@ const HireMe = () => {
     { id: "payment", title: "Structure", subtitle: "Payment preference?", options: ["One-time payment", "Monthly retainer"] },
     { id: "budget", title: "Investment", subtitle: "Estimated budget?", options: ["₹3k – ₹5k", "₹5k – ₹15k", "₹15k – ₹30k", "₹30k+"] },
     { id: "start", title: "Timeline", subtitle: "When do you want to start?", options: ["Immediately", "Within 7 days", "This month"] },
-    { id: "priority", title: "Focus", subtitle: "What matters more to you?", options: ["Premium quality", "Balanced quality + budget", "Lowest cost"] },
+    { id: "priority", title: "Focus", subtitle: "What matters more to you?", options: ["Premium quality", "Balanced quality + budget", "Lowest quality"] },
     { id: "ready", title: "Commitment", subtitle: "re you ready to proceed if pricing & samples fit?", options: ["Yes", "Maybe", "Just exploring"] },
   ];
 
