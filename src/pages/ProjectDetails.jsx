@@ -25,14 +25,17 @@ const ProjectDetails = () => {
 
         let data = res.data;
 
-        // ✅ TOOLS FIX (string OR array both support)
+        // ✅ TOOLS FIX: Robust parsing for all data types (String, JSON, or Array)
         if (data.tools) {
           if (typeof data.tools === "string") {
             try {
-              data.tools = JSON.parse(data.tools);
+              const parsed = JSON.parse(data.tools);
+              data.tools = Array.isArray(parsed) ? parsed : [parsed];
             } catch {
-              data.tools = data.tools.split(","); // fallback
+              data.tools = data.tools.split(",").map(t => t.trim()).filter(t => t !== "");
             }
+          } else if (!Array.isArray(data.tools)) {
+            data.tools = [data.tools];
           }
         } else {
           data.tools = [];
@@ -164,12 +167,12 @@ const ProjectDetails = () => {
               {project.title}
             </h1>
 
-            {/* ✅ DESCRIPTION FIX */}
+            {/* DESCRIPTION */}
             <p className="text-gray-400 text-lg md:text-xl italic leading-relaxed border-l-2 border-purple-500/30 pl-6">
               {project.description || "No description."}
             </p>
 
-            {/* 🛠 TOOLS SECTION */}
+            {/* 🛠 TOOLS SECTION (FIXED RENDER) */}
             <div className="bg-white/[0.03] border border-white/5 p-8 rounded-[2.5rem] backdrop-blur-3xl">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-purple-600/20 rounded-2xl text-purple-500">

@@ -119,7 +119,14 @@ const AddProject = () => {
     formData.append("title", title);
     formData.append("description", description);
     formData.append("category", category);
-    selectedTools.forEach((tool) => formData.append("tools", tool));
+    
+    // ✅ FIX: Tools ko sahi se array format mein bhejna
+    if (selectedTools.length > 0) {
+      selectedTools.forEach((tool) => {
+        formData.append("tools", tool);
+      });
+    }
+
     formData.append("image", image);
     formData.append("video", video);
 
