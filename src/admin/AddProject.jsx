@@ -120,7 +120,7 @@ const AddProject = () => {
     formData.append("description", description);
     formData.append("category", category);
     
-    // ✅ FIX: Tools ko sahi se array format mein bhejna
+    // ✅ TOOLS FIX: Backend ko array format mein bhejna
     if (selectedTools.length > 0) {
       selectedTools.forEach((tool) => {
         formData.append("tools", tool);
