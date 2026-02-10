@@ -1,93 +1,100 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, Instagram, ArrowUpRight, Sparkles } from "lucide-react";
+
 import logo from "../assets/logo.png";
+import pr from "../assets/premiumpro.png";
+import ae from "../assets/afftereffect.png";
+import cc from "../assets/capcut.png";
+import dv from "../assets/dv.png";
 
 const AboutMe = () => {
+
   const skills = [
-    { name: "Pr", color: "text-blue-500", fullName: "Premiere Pro" },
-    { name: "Ae", color: "text-purple-500", fullName: "After Effects" },
-    { name: "Cc", color: "text-white", fullName: "CapCut Pro" },
+    { img: pr, name: "Premiere Pro" },
+    { img: ae, name: "After Effects" },
+    { img: cc, name: "CapCut Pro" },
+    { img: dv, name: "DaVinci Resolve" },
   ];
 
   return (
     <section className="relative min-h-screen bg-[#020205] flex items-center pt-20 pb-20 overflow-hidden font-sans">
-      
-      {/* Background Glows (Minimal) */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
+
+      {/* Background Glows */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/5 blur-[120px] rounded-full" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
-          
-          {/* LEFT: Image Section */}
+
+          {/* LEFT IMAGE */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative flex-shrink-0"
+            className="relative"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-white/10 p-2 bg-gradient-to-b from-white/10 to-transparent">
-                <img
-                  src={logo}
-                  alt="Aman"
-                  className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
-                />
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-white/10 p-2 bg-gradient-to-b from-white/10">
+              <img src={logo} className="w-full h-full object-cover rounded-full grayscale-0 hover:grayscale-0 transition-all duration-700" />
             </div>
-            
-            {/* Minimal Badge */}
-            <div className="absolute -bottom-2 -right-2 bg-white text-black px-4 py-2 rounded-full font-bold text-[10px] uppercase tracking-tighter shadow-xl">
-              7 Years Exp.
+
+            <div className="absolute -bottom-2 -right-2 bg-white text-black px-4 py-2 rounded-full font-bold text-[10px] shadow-xl">
+              4+ Years Exp.
             </div>
           </motion.div>
 
-          {/* RIGHT: Content Section */}
+          {/* RIGHT CONTENT */}
           <div className="flex-1 space-y-6 text-center md:text-left">
-            <div className="space-y-2">
-              <span className="flex items-center justify-center md:justify-start gap-2 text-purple-500 text-[10px] font-black uppercase tracking-[0.4em]">
-                <Sparkles size={12} /> Founder of FTX MEDIA
-              </span>
-              <h2 className="text-3xl md:text-7xl font-black text-white italic tracking-tighter uppercase leading-none">
-                Scaling <br />
-                <span className="text-purple-600">7-Figure Brands.</span>
-              </h2>
-            </div>
 
-            <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
-              I’m <span className="text-white font-bold">Aman</span>, a Video Editor with <span className="text-white">7 years of experience</span>. I help brands scale through high-engagement edits and now run a 7-figure agency, <span className="text-purple-500 italic font-bold">FTX MEDIA</span>, to help brands like yours.
+            <span className="flex items-center justify-center md:justify-start gap-2 text-purple-500 text-[10px] font-black uppercase tracking-[0.35em]">
+                          <Sparkles size={12} /> Founder of FTX MEDIA
+                        </span>
+
+            <h2 className="text-3xl md:text-7xl font-black text-white italic uppercase">
+              Scaling <br />
+              <span className="text-purple-600">7-Figure Brands.</span>
+            </h2>
+
+            <p className="text-gray-400 max-w-lg">
+              I’m <b className="text-white">Aman</b>, a Video Editor with 4+ years of experience.  
+              I help brands scale through premium edits.
             </p>
 
-            <p className="text-gray-500 text-sm italic max-w-md mx-auto md:mx-0 leading-relaxed border-l-2 border-white/5 pl-4">
-              I only work with those who value creativity and a premium vibe. If you're looking for quality and don't worry about money—let's create something awesome!
-            </p>
-
-            {/* Simple Skills Row */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-6 py-2">
-              {skills.map((skill, idx) => (
-                <div key={idx} className="flex flex-col items-center md:items-start group">
-                  <span className={`text-xl font-black ${skill.color}`}>{skill.name}</span>
-                  <span className="text-[8px] uppercase tracking-widest text-gray-600 group-hover:text-gray-400 transition-colors">
-                    {skill.fullName}
-                  </span>
+            {/* 🔥 SKILLS LOGOS */}
+            <div className="flex flex-wrap justify-center md:justify-start gap-8 pt-4">
+              {skills.map((skill, i) => (
+                <div key={i} className="group flex flex-col items-center gap-2">
+                  <img 
+                    src={skill.img} 
+                    alt={skill.name}
+                    className="w-12 h-12 object-contain scale-90 group-hover:scale-110 transition-all duration-300"
+                  />
+                  <p className="text-[10px] text-gray-500 group-hover:text-white transition">
+                    {skill.name}
+                  </p>
                 </div>
               ))}
             </div>
 
-            {/* Simple Actions */}
-            <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
-              <button 
-                onClick={() => window.location.href = '/hire-me'}
-                className="group flex items-center gap-2 px-8 py-3 bg-white text-black rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-purple-600 hover:text-white transition-all shadow-lg"
+            {/* BUTTONS */}
+            <div className="flex flex-col sm:flex-row items-center gap-6 pt-6">
+              <button
+                onClick={() => window.location.href = "/hire-me"}
+                className="flex items-center gap-2 px-8 py-3 bg-white text-black rounded-full font-bold uppercase text-[10px] hover:bg-purple-600 hover:text-white transition"
               >
-                Let's Collab <ArrowUpRight size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                Let's Collab <ArrowUpRight size={14} />
               </button>
 
               <div className="flex gap-4">
-                <a href="https://instagram.com/sumitsonishk311" className="text-gray-500 hover:text-white transition-colors"><Instagram size={20} /></a>
-                <a href="mailto:your@email.com" className="text-gray-500 hover:text-white transition-colors"><Mail size={20} /></a>
+                <a href="https://instagram.com/amanftx07" className="text-gray-500 hover:text-pink-500 transition-colors">
+                  <Instagram />
+                </a>
+                <a href="ftxmedia8@gmail.com" className="text-gray-500 hover:text-purple-500 transition-colors">
+                  <Mail />
+                </a>
               </div>
             </div>
+
           </div>
         </div>
       </div>

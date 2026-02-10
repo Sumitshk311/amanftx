@@ -32,7 +32,7 @@ const ContactFooter = () => {
 
           <div className="flex flex-col md:flex-row items-stretch justify-center bg-white/[0.01] backdrop-blur-sm">
             <a
-              href="mailto:your@email.com"
+              href="ftxmedia8@gmail.com"
               className="flex-1 flex items-center justify-center gap-4 py-10 hover:bg-white/[0.03] transition-all duration-500 group/item border-b md:border-b-0 md:border-r border-white/5"
             >
               <div className="p-3 bg-purple-500/10 rounded-full group-hover/item:bg-purple-500/20 transition-all">
@@ -44,7 +44,7 @@ const ContactFooter = () => {
             </a>
 
             <a
-              href="https://instagram.com/yourprofile"
+              href="https://www.instagram.com/amanftx07"
               className="flex-1 flex items-center justify-center gap-4 py-10 hover:bg-white/[0.03] transition-all duration-500 group/item"
             >
               <div className="p-3 bg-pink-500/10 rounded-full group-hover/item:bg-pink-500/20 transition-all">
@@ -58,7 +58,7 @@ const ContactFooter = () => {
         </div>
       </div>
 
-      {/* 3. Social Media Icons */}
+      {/* 3. Social Media Icons
       <div className="mt-20 flex justify-center gap-10 relative z-10">
         {[Twitter, Youtube, Play, Send].map((Icon, idx) => (
           <motion.div
@@ -69,7 +69,7 @@ const ContactFooter = () => {
             <Icon size={22} />
           </motion.div>
         ))}
-      </div>
+      </div> */}
 
       {/* 4. SIGNATURE & COPYRIGHT SECTION */}
       <div className="mt-24 text-center relative z-10">

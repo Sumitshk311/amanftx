@@ -42,7 +42,7 @@ const Contact = () => {
           
           {/* Instagram Card */}
           <motion.a
-            href="https://instagram.com/sumitsonishk311"
+            href="https://www.instagram.com/amanftx07"
             target="_blank"
             whileHover={{ y: -10 }}
             className="group p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 flex flex-col items-center text-center transition-all hover:border-pink-500/30 hover:bg-pink-500/5"
@@ -51,13 +51,13 @@ const Contact = () => {
               <Instagram className="text-gray-400 group-hover:text-pink-500 transition-colors" size={24} />
             </div>
             <h3 className="text-white font-black italic uppercase tracking-tighter mb-2">Instagram</h3>
-            <p className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-4">@sumitsonishk311</p>
+            <p className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-4">@amanftx07</p>
             <ArrowRight className="text-gray-700 group-hover:text-white group-hover:translate-x-2 transition-all" size={18} />
           </motion.a>
 
           {/* Email Card */}
           <motion.a
-            href="mailto:your@email.com"
+            href="ftxmedia8@gmail.com"
             whileHover={{ y: -10 }}
             className="group p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 flex flex-col items-center text-center transition-all hover:border-blue-500/30 hover:bg-blue-500/5"
           >
