@@ -111,7 +111,7 @@ const TermsAndConditions = () => {
           </div>
 
           {/* Final Compliance Bar */}
-          <motion.div 
+          <motion.div onClick={() => window.location.href = "/hire-me"}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="mt-12 p-10 rounded-[3rem] bg-gradient-to-br from-purple-600 to-blue-700 text-center relative overflow-hidden group"
@@ -119,7 +119,7 @@ const TermsAndConditions = () => {
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20" />
             <div className="relative z-10">
               <Handshake className="mx-auto mb-4 text-white" size={40} />
-              <h3 className="text-2xl font-black uppercase italic italic mb-2">Ready to Collaborate?</h3>
+              <h3 className="text-2xl font-black uppercase italic mb-2">Ready to Collaborate?</h3>
               <p className="text-white/70 text-xs uppercase tracking-widest font-bold">Advance Payment = Agreement Confirmed</p>
             </div>
           </motion.div>
