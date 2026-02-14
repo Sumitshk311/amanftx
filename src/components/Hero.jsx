@@ -21,8 +21,8 @@ const Hero = () => {
 
         {/* Subheading */}
         <p className="text-gray-400 text-lg md:text-xl font-light tracking-wide mb-10 max-w-2xl mx-auto">
-          Transforming Ideas <span className="italic font-serif">Iɴto</span>{" "}
-          Stunning Edits
+          Helping Brands <span className="italic font-serif">Iɴ</span>{" "}
+          Generating Engagement
         </p>
 
         {/* Action Buttons (Wahi purane wale) */}
