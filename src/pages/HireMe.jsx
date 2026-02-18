@@ -158,7 +158,7 @@ Let's discuss onboarding.`;
                   />
                   <span>
                     I agree to{" "}
-                    <a href="/terms" className="text-purple-500 underline hover:text-white">Terms & Conditions</a>{" "}
+                    <a href="/term" className="text-purple-500 underline hover:text-white">Terms & Conditions</a>{" "}
                     and{" "}
                     <a href="/privacy" className="text-purple-500 underline hover:text-white">Privacy Policy</a>
                   </span>
