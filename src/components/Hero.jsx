@@ -34,8 +34,8 @@ const Hero = () => {
           </button>
 
           <Link to="/hire-me">
-            <button className="w-full sm:w-auto px-10 py-3.5 bg-transparent border border-white/20 hover:border-white/50 text-white font-bold rounded-lg transition-all duration-300 hover:bg-white/5 active:scale-95">
-              Hire Me
+            <button className="w-full sm:w-auto px-10 py-3.5 bg-transparent border border-white/20 hover:border-white/50 text-white font-semibold italic rounded-lg transition-all duration-300 hover:bg-white/5 active:scale-95">
+              Get My First Edit
             </button>
           </Link>
         </div>
