@@ -28,9 +28,9 @@ const SignatureSection = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="relative inline-block group"
         >
-          {/* <h2 className="signature-alex text-7xl md:text-9xl text-white drop-shadow-[0_0_20px_rgba(168,85,247,0.2)] group-hover:text-purple-400 transition-colors duration-1000">
+          <h2 className="signature-alex text-7xl md:text-9xl text-white drop-shadow-[0_0_20px_rgba(168,85,247,0.2)] group-hover:text-purple-400 transition-colors duration-1000">
             Sumit Soni
-          </h2> */}
+          </h2>
           
           {/* Animated Stroke Underline */}
           <motion.div 

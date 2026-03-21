@@ -101,11 +101,11 @@ const ContactFooter = () => {
             }}
           />
           <div className="absolute inset-0 bg-purple-500/20 blur-3xl -z-10 group-hover:bg-purple-500/40 transition-all"></div>
-
+{/* 
           <h3 className="text-white italic text-[12px] md:text-[14px] font-medium mt-2 tracking-[0.15em] drop-shadow-lg group-hover:text-purple-400 transition">
             Sumit Soni
           </h3>
-          <div className="w-20 h-[1px] bg-gradient-to-r from-transparent via-purple-500 to-transparent mt-2"></div>
+          <div className="w-20 h-[1px] bg-gradient-to-r from-transparent via-purple-500 to-transparent mt-2"></div> */}
         </a>
 
         {/* NEW LEGAL SECTION - Yahan add kiya hai */}
