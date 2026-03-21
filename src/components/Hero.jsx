@@ -11,7 +11,7 @@ const Hero = () => {
 <div className="relative z-10 text-center px-6 max-w-4xl">
 
   {/* 🔥 Main Heading */}
-  <h1 className="text-3xl md:text-5xl text-white leading-tight font-semibold font-merienda">
+  <h1 className="text-3xl md:text-5xl text-white leading-tight font-semibold">
 
     WE TURN{" "}
 
