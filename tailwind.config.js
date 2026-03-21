@@ -10,11 +10,13 @@ export default {
   plugins: [],// tailwind.config.js
 // module.exports = {
   theme: {
-    extend: {
-      fontFamily: {
-        qwigley: ["Qwigley", "cursive"],
-      },
+  extend: {
+    fontFamily: {
+      qwigley: ["Qwigley", "cursive"],
+      merienda: ["Merienda", "cursive"],
     },
   },
+},
 // };/
 }
+
